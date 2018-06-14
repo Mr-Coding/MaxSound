@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mute_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000099cc"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/muteBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="静音"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.frank.maxsound">
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_max"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_max"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver android:name=".widget.Max">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/max_info" />
+        </receiver>
+        <receiver android:name=".widget.Mute">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/mute_info" />
+        </receiver>
+
+        <receiver android:name=".service.MyBroadcast" />
+        <service android:name=".service.MyIntentService"
+            android:exported="false" />
+
+        <activity android:name=".activity.BaseActivity"/>
+        <activity android:name=".activity.MaxConfigureActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE." />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MuteConfigureActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE." />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

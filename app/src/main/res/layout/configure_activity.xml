@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_color"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="?android:attr/colorBackground" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color1"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color2"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color3"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color4"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color5"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color6"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color7"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color8"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color9"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <com.frank.maxsound.view.ColorCheck
+                android:id="@+id/color10"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/icon_check"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>
